@@ -1,0 +1,43 @@
+{% load static %}
+{% include 'admin/admin_head.html' %}
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            {% include 'admin/navbar.html' %}
+
+            <div class="container-xxl py-5 bg-primary hero-header mb-5">
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5 py-5">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container table-responsive py-5">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Facebook</th>
+                        <th scope="col">Instagram</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in data %}
+                    <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{item.name}}</td>
+                        <td>{{item.fb}}</td>
+                        <td>{{item.instagram}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+    </div>
+</body>
+
+</html>

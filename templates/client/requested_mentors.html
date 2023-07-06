@@ -1,0 +1,47 @@
+{% load static %}
+{% include 'client/client_head.html' %}
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            {% include 'client/navbar.html' %}
+
+            <div class="container-xxl py-5 bg-primary hero-header mb-5">
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5 py-5">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-xxl py-5" id="mentors">
+            <div class="container px-lg-5">
+                <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="position-relative d-inline text-primary ps-4">Requests</h6>
+                    <h2 class="mt-2">Requsted Mentors</h2>
+                </div>
+                <div class="row g-4">
+                    {% for mentors in data %}
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5" style="width: 75px;">
+                                    <a class="btn btn-square text-primary bg-white my-1" href="{{mentors.mentor.fb}}"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square text-primary bg-white my-1" href="{{mentors.mentor.instagram}}"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <img class="img-fluid rounded w-100" src="media/{{mentors.mentor.profilepic}}" alt="">
+                            </div>
+                            <div class="px-4 py-3">
+                                <h5 class="fw-bold m-0">{{mentors.mentor.name}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div> 
+            </div>
+        </div>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.diary-container {
+    margin: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid black;
+    background-color: white;
+    width: 250px;
+    min-height: 404.5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+    -webkit-animation-name: shadow-show;
+   /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1.5s;
+   /* Safari 4.0 - 8.0 */
+    animation-name: shadow-show;
+    animation-duration: 1.5s;
+    -webkit-transition-timing-function: cubic-bezier(0.795, 0, 0.165, 1);
+    -o-transition-timing-function: cubic-bezier(0.795, 0, 0.165, 1);
+    transition-timing-function: cubic-bezier(0.795, 0, 0.165, 1);
+}
+.card button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border: none;
+    background-color: salmon;
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px 25px;
+    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-transform: uppercase;
+}

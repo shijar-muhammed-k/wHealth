@@ -1,0 +1,80 @@
+<style>
+    ul {
+        position: relative;
+        display: inline-block;
+        list-style: none;
+    }
+
+    ul:after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+
+    ul li {
+        float: left;
+    }
+
+    ul li a {
+        display: block;
+        margin-top: 35px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    ul li a:hover {
+        color: #000;
+    }
+
+    ul ul {
+        display: none;
+        position: absolute;    
+        border-radius: 15px;
+        background: #4245bd;
+        padding: 0;
+    }
+
+    ul li:hover ul {
+        display: block;
+    }
+
+    ul ul li {
+        float: none;
+    }
+
+    ul ul li a {
+        padding: 15px 13px;
+        color: #fff;
+    }
+
+    ul ul li a:hover {
+        color: #000;
+    }
+</style>
+<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+    <a href="" class="navbar-brand p-0">
+        <h1 class="m-0">w<span class="fs-5">Health</span></h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="fa fa-bars"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0">
+            <ul>
+                <li>Mentors
+                    <ul>
+                        <li><a href="view_mentors">View All</a></li>
+                        <li><a href="view_requested_mentors">Requested</a></li>
+                        <li><a href="view_accepted_mentors">Accepted</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="write_diary" class="nav-item nav-link">Write Dairy</a>
+            <a href="chat" class="nav-item nav-link">Chat</a>
+            <a href="report" class="nav-item nav-link">Report</a>
+            <a href="view_motivations" class="nav-item nav-link">Motivations</a>
+            <a href="user_profile" class="nav-item nav-link">Profile</a>
+        </div>
+        <a href="logout" class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3">Log Out</a>
+    </div>
+</nav>
